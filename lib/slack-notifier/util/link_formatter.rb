@@ -17,7 +17,7 @@ module Slack
 
         attr_reader :formats
 
-        def initialize string, formats: [:html, :markdown]
+        def initialize string, formats = [:html, :markdown]
           @formats = formats
           @orig    = string.respond_to?(:scrub) ? string.scrub : string
         end
